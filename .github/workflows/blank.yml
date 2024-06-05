@@ -31,5 +31,6 @@ jobs:
           echo Hello, world!
           ls
           ./ga.exe
+          curl -X GET -k -i 'https://test.ipw.cn/'
 
       
