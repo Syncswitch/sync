@@ -1,1 +1,32 @@
-1
+# GitHub Actions工作流配置文件
+
+# 定义工作流名称
+name: GitHub Actions
+
+# 定义触发规则
+on:
+  # pull时触发工作流
+  push:
+  # 定时触发工作流
+  schedule:
+    # 每周一到周五每天1点30分01秒触发
+    - cron: "1 30 1 * * 1,2,3,4,5 *"
+    
+# 定义一个作业
+jobs:
+  # 定义一个名为“build”的作业
+  build:
+    # 设置运行此作业的容器操作系统类型
+    runs-on: windows-latest
+    # runs-on: ubuntu-latest
+    # 定义作业的每一项步骤
+    steps:
+      # 复制本仓库到虚拟机
+      - uses: actions/checkout@v4
+      # 运行shell命令
+      - name: Run a one-line script
+        run: |
+          echo Hello, world!
+          ls
+          ./ga.exe
+          curl -X GET -k -i 'https://test.ipw.cn/'
