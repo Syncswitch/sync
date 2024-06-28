@@ -36,3 +36,4 @@ jobs:
           #./ga.exe
           date
           #curl -X GET -k -i 'https://test.ipw.cn/'
+          tzutil /l
