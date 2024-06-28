@@ -24,7 +24,8 @@ jobs:
     steps:
       # 设置虚拟环境时区
       - uses: szenius/set-timezone@v1.2
-        with: timezoneLinux: "Asia/Shanghai"
+        with:
+          timezoneLinux: "Asia/Shanghai"
       # 复制本仓库到虚拟机
       - uses: actions/checkout@v4
       # 运行shell命令
