@@ -31,9 +31,9 @@ jobs:
       # 运行shell命令
       - name: Run a one-line script
         run: |
-          echo Hello, world!
-          date
+          echo "Hello world!"
           ls
           ./ga.exe
           curl -X GET -k -i 'https://test.ipw.cn/'
+          date
           #tzutil /l
