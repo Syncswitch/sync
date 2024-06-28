@@ -24,15 +24,14 @@ jobs:
     steps:
       # 设置虚拟环境时区
       - uses: szenius/set-timezone@v1.2
-        with:
-          timezoneLinux: "Asia/Shanghai"
+        with: timezoneLinux: "Asia/Shanghai"
       # 复制本仓库到虚拟机
       - uses: actions/checkout@v4
       # 运行shell命令
       - name: Run a one-line script
         run: |
           echo Hello, world!
-          ls
+          #ls
           #./ga.exe
           date
-          curl -X GET -k -i 'https://test.ipw.cn/'
+          #curl -X GET -k -i 'https://test.ipw.cn/'
