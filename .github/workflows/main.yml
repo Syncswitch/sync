@@ -25,7 +25,7 @@ jobs:
       # 设置虚拟环境时区
       - uses: szenius/set-timezone@v1.2
         with:
-           timezoneWindows: "Singapore Standard Time"
+           timezoneWindows: "China Standard Time"
       # 复制本仓库到虚拟机
       - uses: actions/checkout@v4
       # 运行shell命令
@@ -33,7 +33,7 @@ jobs:
         run: |
           echo Hello, world!
           ls
-          #./ga.exe
+          ./ga.exe
           date
-          #curl -X GET -k -i 'https://test.ipw.cn/'
-          tzutil /l
+          curl -X GET -k -i 'https://test.ipw.cn/'
+          #tzutil /l
